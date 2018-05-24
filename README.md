@@ -7,14 +7,24 @@
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Grid Size:
+To change to a different grid size, use the radio button to select the size, then click on the new game icon.
 
-To get started, open `js/app.js` and start building out the app's functionality
+New Game:
+To start a new game, click on the New Game icon in the upper right area.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Restart Game:
+To restart the current game, click on the restart icon in the upper right area.
+
+Timer:
+A timer keeps track of the time it takes to complete a game.
+
+Star Rating:
+You being with a 5 star (hightest) rating.  As the number of moves increase, your star rating will decline.  The star ration is proportional to the grid size.
+
 
 ## Contributing
 
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
