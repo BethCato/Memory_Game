@@ -5,8 +5,8 @@ const icons = [
     'fa-apple',
     'fa-angellist',
     'fa-user-secret',
-    'fa-rocket', 
-    'fa-qq', 
+    'fa-rocket',
+    'fa-qq',
     'fa-bomb',
     'fa-bolt',
     'fa-bell',
@@ -68,14 +68,14 @@ function buildDeck () {
             x = allInputs.length;  /* found the right one - force loop to stop */
         }
     }
-    
+
     /* rebuild card array - 2 of each card */
     for (let pair = 0; pair <= numPairs-1; pair++) {
         for (let ctr = 0; ctr <= 1; ctr++) {
             newCards[pair*2+ctr] = icons[pair];
         }
     }
-    
+
     /* shuffle cards */
     shuffle(newCards);
 
@@ -120,7 +120,7 @@ function buildDeck () {
 }
 
 /*****  Shuffle an array  *****/
-// Shuffle function from http://stackoverflow.com/a/2450976  
+// Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -203,13 +203,13 @@ function checkMatch () {
 }
 
 function clearStars() {
-    oldStars = document.querySelector('.stars')
+    oldStars = document.querySelector('.stars');
     newStars = document.createElement('ul');
     newStars.className='stars';
 
     for (var ctr = 1; ctr <= 5; ctr++) {
         const newLi = document.createElement('li');
-        const newI = document.createElement('i')
+        const newI = document.createElement('i');
         newI.className = 'fa fa-star';
         newLi.appendChild(newI);
         newStars.appendChild(newLi);
@@ -223,7 +223,7 @@ function resetDeck() {
     for (var ctr = 0; ctr < theCards.length; ctr++) {
         theCards[ctr].className = 'card';
     }
-    
+
     /* reset other variables */
     firstPick = 0;
     secondPick = 0;
@@ -234,7 +234,7 @@ function resetDeck() {
     clearInterval(timer);
     timer=null;
     firstClick=true;
-    totalSeconds = -1
+    totalSeconds = -1;
     setTime();
     document.querySelector('.moves').textContent = 0;
 }
@@ -244,7 +244,7 @@ function setTime() {
     secondsLbl.innerHTML = pad(totalSeconds % 60);
     minutesLbl.innerHTML = pad(parseInt(totalSeconds / 60));
 }
-  
+
 function pad(val) {
     var valString = val + "";
     if (valString.length < 2) {
@@ -273,8 +273,8 @@ function checkStar() {
 function removeStar() {
     let numStars = document.getElementsByClassName('fa-star');
     if (numStars.length > 1) {
-        tempStar = document.querySelector('.stars')
-        tempStar.removeChild(tempStar.firstChild)
+        tempStar = document.querySelector('.stars');
+        tempStar.removeChild(tempStar.firstChild);
     }
 }
 
@@ -296,5 +296,3 @@ document.querySelector('#newGame').addEventListener('click', buildDeck);
 
 /* first time the page is loaded, build the deck with default 4x4 size*/
 buildDeck();
-
-

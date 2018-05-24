@@ -40,7 +40,7 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-        background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -130,28 +130,17 @@ h1 {
 }
 
 .msgbox {
-    visibility: hidden; /*hidden or visible*/
+    visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
     text-align: center;
-    color: rgb(230, 230, 230);  /* rgb(12, 226, 12);*/
+    color: rgb(230, 230, 230);
     font-size: 80px;
     font-weight: bold;
     text-shadow: 5px 5px gray;
 }
 .score {
     font-size: 60px;
-}
-
-/*
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.visibility === "hidden") {
-        x.style.visibility = "visible";
-    } else {
-        x.style.display = "hidden";
-    }
 }
