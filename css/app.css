@@ -55,7 +55,8 @@ h1 {
     transform: rotateY(180deg);
     height: 125px;
     width: 125px;
-    background: #2e3d49;
+    /*background: #2e3d49;*/
+    background: #ffffff url('../img/gingham.png');
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
