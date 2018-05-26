@@ -37,7 +37,12 @@
         </ul>
         <div class="msgbox">
             <p>Game Over!</p>
-            <p class="score"></p>
+            <ul class="stats">
+                <li>Number of Moves: <span id = "totalMoves"></span></li>
+                <li>Star Rating: <span id = "starRating"></span></li>
+                <li>Elapsed Time: <span  id = "timeTaken"></span></li>
+            </ul>
+            <button onclick="buildDeck()">New Game</button> 
         </div>
     </div>
 

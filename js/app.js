@@ -46,7 +46,6 @@ let timer = null;
 function buildDeck () {
     /* stop listening while building the deck */
     document.querySelector('.deck').removeEventListener('click', openCard);
-    /* hide Game Over message from display */
     document.querySelector('.msgbox').style.visibility = "hidden";
     /* reset moves counter to zero */
     document.querySelector('.moves').textContent = 0;
@@ -173,10 +172,15 @@ function checkMatch () {
             secondPick = 0;
             firstCardIcon = "";
             secondCardIcon = "";
-            /*Determine if game is over*/
             numMatches++
+            /*Determine if game is over*/
             if (numMatches == numPairs) {
-                document.querySelector('.score').textContent=("Number of moves: " + document.querySelector('.moves').textContent)
+            /* display Game Over message on deck display */
+                document.querySelector('#totalMoves').textContent = document.querySelector('.moves').textContent;
+                document.querySelector('#starRating').textContent = document.getElementsByClassName('fa-star').length;
+                totalSecs = pad(totalSeconds % 60);
+                totalMins = pad(parseInt(totalSeconds / 60));
+                document.querySelector('#timeTaken').textContent = totalMins + ":" + totalSecs;
                 document.querySelector('.msgbox').style.visibility = "visible";
                 numMatches = 0;
                 clearInterval(timer);
@@ -258,7 +262,6 @@ function checkStar() {
     let numStars = document.getElementsByClassName('fa-star');
     let numMoves = document.querySelector('.moves').textContent;
     let ratio = numMoves / numPairs;
-    console.log("ratio: " + ratio);
     if (ratio >= 1.8 && numStars.length === 5) {
         removeStar();
     } else if (ratio >= 2.2 && numStars.length === 4)  {
