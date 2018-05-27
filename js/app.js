@@ -295,7 +295,9 @@ function removeStar() {
 
 /* Add listener to deck */
 document.querySelector('#resetGame').addEventListener('click', resetDeck);
-document.querySelector('#newGame').addEventListener('click', buildDeck);
+document.querySelector('.btnNewGame').addEventListener('click', buildDeck);
+document.querySelector('.gridSelector').addEventListener('click', buildDeck);
+
 
 /* first time the page is loaded, build the deck with default 4x4 size*/
 buildDeck();

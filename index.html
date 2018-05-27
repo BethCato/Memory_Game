@@ -28,21 +28,20 @@
                 <input type="radio" id="choice3" name="gridSize" value="15"> 5 x 6
             </form>
             <div class="options">
-                <i id="resetGame" class="fa fa-repeat"></i> Reset Game <br>
-                <i id="newGame" class="fa fa-play-circle"></i> New Game <br>
+                <i id="resetGame" class="fa fa-repeat"></i> Reset<br>
                 Timer: <span id="minutes">00</span>:<span id="seconds">00</span>
             </div>
         </section>
         <ul class="deck">
         </ul>
         <div class="msgbox">
-            <p>Game Over!</p>
             <ul class="stats">
+                <li class="congrats">You Won!</li> 
                 <li>Number of Moves: <span id = "totalMoves"></span></li>
                 <li>Star Rating: <span id = "starRating"></span></li>
                 <li>Elapsed Time: <span  id = "timeTaken"></span></li>
+                <li class="btnNewGame">New Game</li> 
             </ul>
-            <button onclick="buildDeck()">New Game</button> 
         </div>
     </div>
 

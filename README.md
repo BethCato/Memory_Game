@@ -20,7 +20,7 @@ You win the game when all the cards are facing up.
 
 Options:
 Grid Size:
-To change to a different grid size, use the radio button to select the size, then click on the new game icon.
+To change to a different grid size, use the radio button to select the size.
 
 New Game:
 To start a new game, click on the New Game icon in the upper right area or click the "New Game" button when it displays on the Game Over screen.
